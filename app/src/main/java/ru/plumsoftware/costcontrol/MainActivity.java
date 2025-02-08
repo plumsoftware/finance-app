@@ -618,7 +618,7 @@ public class MainActivity extends AppCompatActivity {
 
         CurrencyWithValueAdapter currencyWithValueAdapter = new CurrencyWithValueAdapter(context, activity, currencyWithValueList);
 
-        recyclerViewCurrencyWithValue.setHasFixedSize(true);
+//        recyclerViewCurrencyWithValue.setHasFixedSize(true);
         recyclerViewCurrencyWithValue.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         recyclerViewCurrencyWithValue.setAdapter(currencyWithValueAdapter);
     }
@@ -637,7 +637,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         CategoryWithFinanceOperationAdapter categoryWithFinanceOperationAdapter = new CategoryWithFinanceOperationAdapter(context, activity, categoryWithFinanceOperationList, mode, bottomSheetDialog);
-        recyclerViewCategories.setHasFixedSize(true);
+//        recyclerViewCategories.setHasFixedSize(true);
         recyclerViewCategories.setLayoutManager(new LinearLayoutManager(context));
         recyclerViewCategories.setAdapter(categoryWithFinanceOperationAdapter);
     }
@@ -723,7 +723,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         CategoryWithFinanceOperationAdapter categoryWithFinanceOperationAdapter = new CategoryWithFinanceOperationAdapter(context, activity, categoryWithFinanceOperations, 0);
-        recyclerViewCategories.setHasFixedSize(true);
+//        recyclerViewCategories.setHasFixedSize(true);
         recyclerViewCategories.setLayoutManager(new LinearLayoutManager(context));
         recyclerViewCategories.setAdapter(categoryWithFinanceOperationAdapter);
     }
