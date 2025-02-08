@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1019753554326",
+    "project_id": "finance-manager-e8522",
+    "storage_bucket": "finance-manager-e8522.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019753554326:android:0afd8e1d61acae42827db7",
+        "android_client_info": {
+          "package_name": "ru.plumsoftware.costcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019753554326-97o4del8dun05hqj4o9gb54b0c7co3ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjS04CW4mEeAfMwRgT_EbpVCWLkhsOlRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019753554326-97o4del8dun05hqj4o9gb54b0c7co3ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

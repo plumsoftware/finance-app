@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <color name="purple_200">#FFBB86FC</color>-->
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!--    NEUTRAL COLORS-->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="neutral_70">#B3000000</color>
+    <color name="neutral_50">#80000000</color>
+    <color name="neutral_30">#4D000000</color>
+
+    <!--    CARDS-->
+    <color name="red_200">#FFDAD5</color>
+    <color name="green_200">#89FA9B</color>
+    <color name="orange_200">#FFDEA0</color>
+    <color name="purple_200">#e9ddff</color>
+    <color name="pink_200">#ffd7f1</color>
+    <color name="blue_200">#dce1ff</color>
+    <color name="yellow_200">#FFF59D</color>
+    <color name="brown_200">#ffdbcc</color>
+    <color name="dark_green_200">#80CBC4</color>
+    <color name="dark_brown_200">#FFAB91</color>
+
+    <color name="sky_blue_200">#80DEEA</color>
+    <color name="light_green_200">#C5E1A5</color>
+
+    <!--    LIGHT THEME-->
+    <color name="primary_l">#054de9</color>
+    <color name="primary_variant_l">#0437A4</color>
+    <color name="on_primary_l">#ffffff</color>
+    <color name="primary_container_l">#dce1ff</color>
+    <color name="on_primary_container_l">#001551</color>
+
+    <color name="secondary_l">#595d72</color>
+    <color name="secondary_variant_l">#454858</color>
+    <color name="on_secondary_l">#ffffff</color>
+    <color name="secondary_container_l">#dee1f9</color>
+    <color name="on_secondary_container_l">#161b2c</color>
+
+    <color name="tertiary_l">#75546f</color>
+    <color name="on_tertiary_l">#ffffff</color>
+    <color name="tertiary_container_l">#ffd7f5</color>
+    <color name="on_tertiary_container_l">#2c1229</color>
+
+    <color name="error_l">#ba1a1a</color>
+    <color name="on_error_l">#ffdad6</color>
+    <color name="error_container_l">#ffdad6</color>
+    <color name="on_error_container_l">#410002</color>
+
+    <color name="background_l">#fefbff</color>
+    <color name="on_background_l">#1b1b1f</color>
+    <color name="surface_l">#fefbff</color>
+    <color name="on_surface_l">#1b1b1f</color>
+
+    <color name="outline_l">#767680</color>
+    <color name="surface_variant_l">#e2e1ec</color>
+    <color name="on_surface_variant_l">#45464f</color>
+
+    <color name="success_l">#54AD20</color>
+    <color name="info_l">#02A2FF</color>
+    <color name="warning_l">#FFCC00</color>
+    <color name="danger_l">#FF401E</color>
+
+    <!--    NIGHT THEME-->
+    <color name="primary_n">#b7c4ff</color>
+    <color name="primary_variant_n">#104BCA</color>
+    <color name="on_primary_n">#002680</color>
+    <color name="primary_container_n">#0039b4</color>
+    <color name="on_primary_container_n">#dce1ff</color>
+
+    <color name="secondary_n">#c2c5dd</color>
+    <color name="on_secondary_n">#2b3042</color>
+    <color name="secondary_container_n">#424659</color>
+    <color name="on_secondary_container_n">#dee1f9</color>
+
+    <color name="tertiary_n">#e3bada</color>
+    <color name="on_tertiary_n">#43273f</color>
+    <color name="tertiary_container_n">#5c3d57</color>
+    <color name="on_tertiary_container_n">#ffd7f5</color>
+
+    <color name="error_n">#ffb4ab</color>
+    <color name="on_error_n">#690005</color>
+    <color name="error_container_n">#93000a</color>
+    <color name="on_error_container_n">#ffdad6</color>
+
+    <color name="background_n">#1b1b1f</color>
+    <color name="on_background_n">#e4e1e6</color>
+    <color name="surface_n">#1b1b1f</color>
+    <color name="on_surface_n">#e4e1e6</color>
+
+    <color name="outline_n">#90909a</color>
+    <color name="surface_variant_n">#45464f</color>
+    <color name="on_surface_variant_n">#c6c5d0</color>
+
+    <color name="success_n">#34D359</color>
+    <color name="info_n">#476CFF</color>
+    <color name="warning_n">#FFD51C</color>
+    <color name="danger_n">#FF3F62</color>
+</resources>

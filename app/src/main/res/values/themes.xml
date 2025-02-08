@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Расходы" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_l</item>
+        <item name="colorPrimaryVariant">@color/primary_l</item>
+        <item name="colorOnPrimary">@color/on_primary_l</item>
+        <item name="colorPrimaryContainer">@color/primary_container_l</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container_l</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_l</item>
+        <item name="colorSecondaryVariant">@color/secondary_l</item>
+        <item name="colorOnSecondary">@color/on_secondary_l</item>
+        <item name="colorSecondaryContainer">@color/secondary_container_l</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container_l</item>
+        <!-- Tertiary brand colors. -->
+        <item name="colorTertiary">@color/tertiary_l</item>
+        <item name="colorOnTertiary">@color/on_tertiary_l</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container_l</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container_l</item>
+        <!-- Error brand colors. -->
+        <item name="colorError">@color/error_l</item>
+        <item name="colorOnError">@color/on_error_l</item>
+        <item name="colorErrorContainer">@color/error_container_l</item>
+        <item name="colorOnErrorContainer">@color/on_error_container_l</item>
+        <!-- Neutral brand colors. -->
+        <item name="android:colorBackground">@color/background_l</item>
+        <item name="colorOnBackground">@color/on_background_l</item>
+        <item name="colorSurface">@color/surface_l</item>
+        <item name="colorOnSurface">@color/on_surface_l</item>
+        <item name="colorOutline">@color/outline_l</item>
+        <item name="colorSurfaceVariant">@color/surface_variant_l</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant_l</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?android:attr/colorBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Navigation bar color. -->
+        <item name="android:navigationBarColor">?attr/colorSecondaryContainer</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/comfortaa</item>
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+
+    <style name="BottomSheetTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_l</item>
+        <item name="colorPrimaryVariant">@color/primary_l</item>
+        <item name="colorOnPrimary">@color/on_primary_l</item>
+        <item name="colorPrimaryContainer">@color/primary_container_l</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container_l</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary_l</item>
+        <item name="colorSecondaryVariant">@color/secondary_l</item>
+        <item name="colorOnSecondary">@color/on_secondary_l</item>
+        <item name="colorSecondaryContainer">@color/secondary_container_l</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container_l</item>
+        <!-- Tertiary brand colors. -->
+        <item name="colorTertiary">@color/tertiary_l</item>
+        <item name="colorOnTertiary">@color/on_tertiary_l</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container_l</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container_l</item>
+        <!-- Error brand colors. -->
+        <item name="colorError">@color/error_l</item>
+        <item name="colorOnError">@color/on_error_l</item>
+        <item name="colorErrorContainer">@color/error_container_l</item>
+        <item name="colorOnErrorContainer">@color/on_error_container_l</item>
+        <!-- Neutral brand colors. -->
+        <item name="android:colorBackground">@color/background_l</item>
+        <item name="colorOnBackground">@color/on_background_l</item>
+        <item name="colorSurface">@color/surface_l</item>
+        <item name="colorOnSurface">@color/on_surface_l</item>
+        <item name="colorOutline">@color/outline_l</item>
+        <item name="colorSurfaceVariant">@color/surface_variant_l</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant_l</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/comfortaa</item>
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+</resources>

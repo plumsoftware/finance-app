@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/rus"
+        android:title="₽"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/br"
+        android:title="₽"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/yua"
+        android:title="¥"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/hk"
+        android:title="$"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/rup"
+        android:title="₹"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/dol"
+        android:title="$"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/eur"
+        android:title="€"
+        app:showAsAction="ifRoom"/>
+</menu>
