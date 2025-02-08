@@ -22,7 +22,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -84,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
         Context context = MainActivity.this;
         Activity activity = MainActivity.this;
         SQLiteDatabaseManager sqLiteDatabaseManager = new SQLiteDatabaseManager(context);
-        ProgressDialog progressDialog = new ProgressDialog();
         sqLiteDatabase = sqLiteDatabaseManager.getWritableDatabase();
 
         //UI theme
@@ -112,8 +110,7 @@ public class MainActivity extends AppCompatActivity {
         final String AD_UNIT_ID = BuildConfig.openAdsId;
         final AdRequestConfiguration adRequestConfiguration = new AdRequestConfiguration.Builder(AD_UNIT_ID).build();
 
-        AppOpenAdLoadListener appOpenAdLoadListener = getAppOpenAdLoadListener(progressDialog);
-
+        AppOpenAdLoadListener appOpenAdLoadListener = getAppOpenAdLoadListener(dialogAd);
         appOpenAdLoader.setAdLoadListener(appOpenAdLoadListener);
         appOpenAdLoader.loadAd(adRequestConfiguration);
 
@@ -130,12 +127,11 @@ public class MainActivity extends AppCompatActivity {
         pieChart = (PieChart) findViewById(R.id.pieChart);
         barchart = (BarChart) findViewById(R.id.barchart);
 
-        ProgressDialog dialog = new ProgressDialog();
-        dialog.showDialog(context);
+        dialogAd.showDialog(context);
         setupCurrency(recyclerViewCurrencyWithValue, context, activity, financeMode, pickedDate);
         setupDate(textViewMonth, textViewYear, pickedDate);
         setupCategoryWithFinanceOperation(recyclerViewCategoriesWithFinanceOperations, context, activity, financeMode, DatabaseConstants.getBaseExpenseCategories(), chartMode);
-        dialog.dismissDialog();
+        dialogAd.dismissDialog();
 
         //Clickers
         imageViewAdd.setOnClickListener(new View.OnClickListener() {
@@ -284,6 +280,7 @@ public class MainActivity extends AppCompatActivity {
 
                             dialogAd.showDialog(context);
                             saveOperation(financeOperation);
+                            dialogAd.dismissDialog();
                             bottomSheetDialog.dismiss();
                         } else {
                             editTextNumber.setError("Введите значение");
@@ -500,6 +497,7 @@ public class MainActivity extends AppCompatActivity {
                 // Called when an impression is recorded for an ad.
             }
         };
+        progressDialog.dismissDialog();
 
         return new AppOpenAdLoadListener() {
             @Override
@@ -529,8 +527,7 @@ public class MainActivity extends AppCompatActivity {
             List<Category> categoryList,
             int dateMode,
             int chartMode) {
-        ProgressDialog dialog = new ProgressDialog();
-        dialog.showDialog(context);
+        dialogAd.showDialog(context);
         setupCurrency(recyclerViewCurrencyWithValue, context, activity, financeMode, calendar);
         switch (dateMode) {
             case 0:
@@ -541,7 +538,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         setupCategoryWithFinanceOperation(recyclerViewCategoriesWithFinanceOperations, context, activity, financeMode, categoryList, chartMode);
-        dialog.dismissDialog();
+        dialogAd.dismissDialog();
     }
 
 
@@ -808,13 +805,11 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     void setDate(TextView textViewSelectedDate) {
-        new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                dateAndTime.set(Calendar.YEAR, year);
-                dateAndTime.set(Calendar.MONTH, monthOfYear);
-                dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                setTime(textViewSelectedDate);
-            }
+        new DatePickerDialog(MainActivity.this, (view, year, monthOfYear, dayOfMonth) -> {
+            dateAndTime.set(Calendar.YEAR, year);
+            dateAndTime.set(Calendar.MONTH, monthOfYear);
+            dateAndTime.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            setTime(textViewSelectedDate);
         },
                 dateAndTime.get(Calendar.YEAR),
                 dateAndTime.get(Calendar.MONTH),
@@ -833,42 +828,40 @@ public class MainActivity extends AppCompatActivity {
                  List<Category> categoryList,
                  PieChart pieChart,
                  int dateMode) {
-        new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                calendar.set(Calendar.YEAR, year);
-                calendar.set(Calendar.MONTH, monthOfYear);
-                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        new DatePickerDialog(MainActivity.this, (view, year, monthOfYear, dayOfMonth) -> {
+            calendar.set(Calendar.YEAR, year);
+            calendar.set(Calendar.MONTH, monthOfYear);
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-                switch (financeMode) {
-                    case 0:
-                        setupFinance(
-                                financeMode,
-                                recyclerViewCurrencyWithValue,
-                                recyclerViewCategoriesWithFinanceOperations,
-                                context,
-                                activity,
-                                textViewMonth,
-                                textViewYear,
-                                calendar,
-                                DatabaseConstants.getBaseExpenseCategories(),
-                                1,
-                                chartMode);
-                        break;
-                    case 1:
-                        setupFinance(
-                                financeMode,
-                                recyclerViewCurrencyWithValue,
-                                recyclerViewCategoriesWithFinanceOperations,
-                                context,
-                                activity,
-                                textViewMonth,
-                                textViewYear,
-                                calendar,
-                                DatabaseConstants.getBaseEarningCategories(),
-                                1,
-                                chartMode);
-                        break;
-                }
+            switch (financeMode) {
+                case 0:
+                    setupFinance(
+                            financeMode,
+                            recyclerViewCurrencyWithValue,
+                            recyclerViewCategoriesWithFinanceOperations,
+                            context,
+                            activity,
+                            textViewMonth,
+                            textViewYear,
+                            calendar,
+                            DatabaseConstants.getBaseExpenseCategories(),
+                            1,
+                            chartMode);
+                    break;
+                case 1:
+                    setupFinance(
+                            financeMode,
+                            recyclerViewCurrencyWithValue,
+                            recyclerViewCategoriesWithFinanceOperations,
+                            context,
+                            activity,
+                            textViewMonth,
+                            textViewYear,
+                            calendar,
+                            DatabaseConstants.getBaseEarningCategories(),
+                            1,
+                            chartMode);
+                    break;
             }
         },
                 calendar.get(Calendar.YEAR),
